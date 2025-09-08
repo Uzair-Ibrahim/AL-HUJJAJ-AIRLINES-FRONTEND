@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Al Hujjaj Airlines</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body 
+        {
+            background-color: #121212;
+            color: white;
+            font-family: 'Ubuntu', Arial, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+        #loader 
+        {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        #loader img 
+        {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            animation: scaleAnimation 1.5s infinite;
+        }
+        @keyframes scaleAnimation 
+        {
+            0% { transform: scale(0.8); opacity: 0.7; }
+            50% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(0.8); opacity: 0.7; }
+        }
+        header 
+        {
+            background-color: #333;
+            color: #0cebeb;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+        header img 
+        {
+            width: 80px;
+            height: 80px; 
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        header h1 
+        {
+            
+            font-size: 2em;
+            flex: 1;
+        }
+        header h2
+        {
+            color: #0cebeb;
+        }
+        nav a 
+        {
+          color: white;
+          text-decoration: none;
+          margin: 0 10px;
+          padding: 10px 15px;
+          border-radius: 5px;
+          background-color: #0cebeb67;
+          transition: transform 0.3s, background-color 0.3s;
+        }
+        nav a:hover {
+          background-color:#83c5be;
+          transform: rotateX(15deg) translateZ(10px);
+        }
+        .services-content {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            margin: 20px auto;
+            width: 90%;
+            
+        }
+        .services-content h2{
+            color: #0cebeb;
+        }
+    
+        .booking-form {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 8px;
+        }
+        .booking-form h2 {
+            color:#0cebeb;
+            margin-bottom: 10px;
+        }
+        .booking-form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #0cebeb;;
+        }
+        .booking-form input,
+        .booking-form select,
+        .booking-form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background-color: #2b2b2b;
+            color: white;
+        }
+        .booking-form button {
+            background-color:#02565f;
+            color: white;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+        .booking-form button:hover 
+        {
+            background-color:#83c5be;
+        }
+        .flights-table 
+        {
+            margin-top: 20px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .flights-table th,
+        .flights-table td {
+            border: 1px solid #02565f;
+            padding: 10px;
+            text-align: left;
+        }
+        .flights-table th {
+            background-color: #02565f;
+            color: white;
+        }
+        .back-button 
+        {
+            display: inline-block;
+            background-color: #02565f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .back-button:hover 
+        {
+            background-color:#83c5be;
+            transform: rotateX(15deg) translateZ(10px);
+        }
+        footer {
+            background-color: #333;
+            color: #83c5be;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-wrap: wrap;
+                justify-content: center;
+                text-align: center;
+            }
+            header img {
+                margin: 10px auto;
+                width: 60px;
+                height: 60px;
+            }
+            header h1 {
+                font-size: 1.8em;
+            }
+            nav a {
+                margin: 5px;
+                font-size: 1em;
+                padding: 8px 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+            header img {
+                width: 50px;
+                height: 50px;
+            }
+            header h1 {
+                font-size: 1.5em;
+            }
+            nav a {
+                padding: 6px 8px;
+                font-size: 0.9em;
+                margin: 3px;
+            }
+            .services-content {
+                padding: 1rem;
+            }
+            .booking-form label, .booking-form input, .booking-form button {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="loader">
+        <img src="6c3a3ff4-3159-471e-a5b4-6f74365c13e2.webp" alt="Loading Logo">
+    </div>
+    <header>
+        <img src="6c3a3ff4-3159-471e-a5b4-6f74365c13e2.webp" alt="Al Hujjaj Airlines Logo">
+        <h1>Our Services</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <div class="services-content">
+        <div class="wel">
+            <h2>What We Offer</h2>
+            <ul>
+                <li>Direct flights to major pilgrimage destinations.</li>
+                <li>Comfortable seating and in-flight amenities.</li>
+                <li>Special services for elderly and disabled travelers.</li>
+                <li>Onboard prayer facilities and special meals.</li>
+                <li>Group booking discounts for pilgrim groups.</li>
+                <li>24/7 customer support for all your needs.</li>
+            </ul>
+        </div>
+        
+        <div class="booking-form">
+            <h2>Book Your Flight</h2>
+            <form id="bookingForm">
+                <label for="source">Source</label>
+                <input type="text" id="source" name="source" placeholder="Enter your source city" required>
+                <label for="destination">Destination</label>
+                <input type="text" id="destination" name="destination" placeholder="Enter your destination city" required>
+                <label for="date">Travel Date</label>
+                <input type="date" id="date" name="date" required>
+                <label for="passengers">Number of Passengers</label>
+                <input type="number" id="passengers" name="passengers" min="1" required>
+                <button type="button" onclick="searchFlights()">Search Flights</button>
+            </form>
+        </div>
+        <h2>Available Flights</h2>
+        <table class="flights-table" id="flightsTable">
+            <thead>
+                <tr>
+                    <th>Flight</th>
+                    <th>Source</th>
+                    <th>Destination</th>
+                    <th>Departure</th>
+                    <th>Arrival</th>
+                </tr>
+            </thead>
+            <tbody id="flightsBody">
+            </tbody>
+        </table>
+    </div>
+    <a href="index.html" class="back-button">Back to Home</a>
+    <footer>
+        <p>&copy; All rights are reserved to Uzair Ibrahim</p>
+    </footer>
+    <script>
+        function searchFlights() 
+        {
+            const source = document.getElementById("source").value;
+            const destination = document.getElementById("destination").value;
+            const date = document.getElementById("date").value;
+            const passengers = document.getElementById("passengers").value;
+            const tableBody = document.getElementById("flightsBody");
+            if (source && destination && date && passengers) {
+                const flights = [
+                    { flight: 'AI202', source: 'Karachi', destination: 'Madina', departure: '2024-12-10 14:00', arrival: '2024-12-10 18:00' },
+                    { flight: 'AI205', source: 'Lahore', destination: 'Mecca', departure: '2024-12-12 08:00', arrival: '2024-12-12 12:00' },
+                    { flight: 'AI207', source: 'Islamabad', destination: 'Madina', departure: '2024-12-15 22:00', arrival: '2024-12-16 02:00' }
+                ];
+                tableBody.innerHTML = '';
+
+                flights.forEach(flight => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${flight.flight}</td>
+                        <td>${flight.source}</td>
+                        <td>${flight.destination}</td>
+                        <td>${flight.departure}</td>
+                        <td>${flight.arrival}</td>
+                    `;
+                    tableBody.appendChild(row);
+                });
+            }
+        }
+        setTimeout(function () {
+            document.getElementById("loader").style.display = "none";
+        }, 3000);
+    </script>
+</body>
+</html>

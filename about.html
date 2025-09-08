@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Al Hujjaj Airlines</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #1c1c1c;
+            color: #d4d4d4;
+            font-family: 'Ubuntu', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 109, 119, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        #loader img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            animation: scaleAnimation 1.5s infinite;
+        }
+        @keyframes scaleAnimation {
+            0% { transform: scale(0.8); opacity: 0.7; }
+            50% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(0.8); opacity: 0.7; }
+        }
+        header {
+            background-color: #333;
+            color: #0cebeb;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+        header img {
+            width: 80px;
+            height: 80px; 
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        header h1 {
+            font-size: 2em;
+            flex: 1;
+        }
+        nav {
+          display: flex;
+          justify-content: flex-end;
+        }
+        nav a {
+          color: #d4d4d4;
+          text-decoration: none;
+          margin: 0 10px;
+          padding: 10px 15px;
+          border-radius: 5px;
+          background-color: #006d77;
+          transition: transform 0.3s, background-color 0.3s;
+        }
+        nav a:hover {
+          background-color:#83c5be ;
+          transform: rotateX(15deg) translateZ(10px);
+        }
+        .about-content {
+            background-color: #2b2b2b;
+            color: #d4d4d4;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+            margin-top: 20px;
+        }
+        .about-content h2 {
+            color: #0cebeb;
+            margin-bottom: 10px;
+        }
+        .about-content p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .about-developers {
+            background-color: #333;
+            color: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin-top: 30px;
+            text-align: center;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .about-developers:hover{
+            transform: rotateX(15deg) translateZ(10px);
+        }
+        .about-developers h3 {
+            color: #0cebeb;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        .about-developers p a {
+            color: #83c5be;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            transform: rotateX(15deg) translateZ(10px);
+        }
+        .about-developers p a:hover {
+            color: #0cebeb;
+            text-decoration: underline;
+            transform: rotateX(15deg) translateZ(10px);
+
+        }
+        .back-button {
+            display: inline-block;
+            background-color: #006d77;
+            color: #d4d4d4;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .back-button:hover {
+            background-color: #83c5be;
+            transform: rotateX(15deg) translateZ(10px);
+        }
+        footer {
+            background-color: #222;
+            color: #0cebeb;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        footer a {
+            color: #0cebeb;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-wrap: wrap;
+                justify-content: center;
+                text-align: center;
+            }
+            header img {
+                margin: 10px auto;
+                width: 60px;
+                height: 60px;
+            }
+            header h1 {
+                font-size: 1.8em;
+            }
+            nav {
+                flex-wrap: wrap;
+            }
+            nav a {
+                margin: 5px;
+                font-size: 1em;
+                padding: 8px 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+            header img {
+                width: 50px;
+                height: 50px;
+            }
+            header h1 {
+                font-size: 1.5em;
+            }
+            nav a {
+                padding: 6px 8px;
+                font-size: 0.9em;
+                margin: 3px;
+            }
+            footer {
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="loader">
+        <img src="6c3a3ff4-3159-471e-a5b4-6f74365c13e2.webp" alt="Loading Logo">
+    </div>
+    <header>
+        <img src="6c3a3ff4-3159-471e-a5b4-6f74365c13e2.webp" alt="Al Hujjaj Airlines Logo">
+        <h1>About Us</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <div class="about-content">
+        <h2>Who We Are</h2>
+        <p>Al Hujjaj Airlines is dedicated to providing a safe, comfortable, and memorable travel experience for pilgrims embarking on their spiritual journey. Our experienced team is committed to ensuring that every flight brings you closer to your spiritual goals.</p>
+        <h2>Our Mission</h2>
+        <p>We aim to create a seamless travel experience, catering specifically to the needs of pilgrims with specialized services and facilities that make your journey enjoyable and stress-free.</p>
+        <h2>Our Values</h2>
+        <p>At Al Hujjaj Airlines, we prioritize safety, comfort, and customer satisfaction, making sure your experience with us is nothing short of extraordinary.</p>
+    </div>
+    <div class="about-developers">
+        <h3>Group Leader <br> UZAIR IBRAHIM</h3>
+        <p><i class="fas fa-phone-alt"></i> <a href="tel:+923210333029">Call Us</a></p>
+        <p><i class="fas fa-envelope"></i> <a href="uzairkamboh311@gmail.com">Email</a></p>
+        <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/uzair-ibrahim-17ba56283/">LinkedIn</a></p>
+        <p><i class="fab fa-github"></i> <a href="https://github.com/Uzair-Ibrahim?tab=repositories">GitHub</a></p>
+    </div>
+    <a href="index.html" class="back-button">Go Back</a>
+    <footer>
+        &copy; 2024 Al Hujjaj Airlines. All rights reserved. Website developed by Uzair Ibrahim and Ahmed Hassan.
+    </footer>
+    <script>
+        setTimeout(function () {
+            document.getElementById("loader").style.display = "none";
+        }, 3000);
+    </script>
+</body>
+</html>
