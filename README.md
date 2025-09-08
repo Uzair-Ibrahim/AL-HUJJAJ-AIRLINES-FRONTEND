@@ -1,13 +1,13 @@
 # ✈️ Al Hujjaj Airlines – Frontend Website
 
-A simple **static frontend website** for **Al Hujjaj Airlines**, built using **HTML and CSS**.  
-The project represents a clean airline website design, featuring a **homepage, services page, and contact page**.
+A **static frontend airline website** built using **HTML, CSS, and JavaScript** in my **1st Semester**.  
+It includes **homepage, services, contact page, flight search, and a complaint submission box**.  
 
 ---
 
 ## 📌 Project Overview
-This website is designed to provide a **user-friendly interface** for airline passengers.  
-It includes basic sections such as flight services, contact information, and a homepage with branding.
+The website represents **Al Hujjaj Airlines** with a simple and modern UI.  
+It provides basic airline features such as flight search, service listings, contact information, and a complaint box for feedback.
 
 ---
 
@@ -15,26 +15,35 @@ It includes basic sections such as flight services, contact information, and a h
 
 - **Home (index.html)**  
   - Airline introduction with **logo & branding**.  
+  - Flight search section with live results.  
   - Navigation menu to other pages.  
 
 - **Services (services.html)**  
-  - Lists airline services like **flight booking, Hajj & Umrah packages, onboard facilities, and customer support**.  
+  - Lists airline services (e.g., **Hajj & Umrah packages, booking, onboard facilities, customer support**).  
 
 - **Contact (contact.html)**  
-  - Provides airline contact details.  
-  - Includes a **contact form** for users to send messages.  
+  - Displays contact details.  
+  - Includes a **complaint/feedback form** for users.  
 
 ---
 
 ## 🎨 Features
-- **Responsive Design** (basic mobile-friendly layout).  
-- **Airline-Themed Branding** with a professional **logo**.  
-- **Simple Navigation Bar** for switching between pages.  
-- **Static Styling** using pure **CSS** (no JS or backend).  
+- **Responsive design** using HTML & CSS.  
+- **Flight Search Functionality** (via JavaScript).  
+  - Users enter **source, destination, date, and passengers**.  
+  - Displays **available flights** in a results table.  
+  - If no flights match, shows "No flights available".  
+
+- **Complaint Box Functionality**  
+  - Users can submit complaints/feedback through a form.  
+  - Data is currently handled on the frontend (can be extended to backend later).  
+
+- **Loader Animation** – A loading effect that hides after 3 seconds.  
+- **Simple Navigation** between pages.  
 
 ---
 
 ## 🛠️ Tech Stack
 - **HTML5** – Page structure  
 - **CSS3** – Styling & layout  
-- **(Optional)** Images for branding (e.g., airline logo, airplane backgrounds)  
+- **JavaScript (ES6)** – Flight search & complaint form logic  
